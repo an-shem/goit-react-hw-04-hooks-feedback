@@ -15,3 +15,13 @@ li {
   list-style-type: none;
   /* Убираем маркеры */
 }
+
+.react-icons {
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.wert {
+  display: block;
+  width: 1000px;
+}

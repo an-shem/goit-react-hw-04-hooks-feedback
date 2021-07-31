@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types';
-import { Wrap } from './Statistics.styled';
+import { Wrap, PositivePercentage, Line } from './Statistics.styled';
+
+import { Progress } from 'antd';
+import 'antd/dist/antd.css';
 
 export default function Statistics({
   good,
@@ -10,11 +13,31 @@ export default function Statistics({
 }) {
   return (
     <Wrap>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total: {total}</p>
-      <p>Positive feedback: {positivePercentage}%</p>
+      <p>
+        <span>Good:</span> <span>{good}</span>
+      </p>
+      <p>
+        <span>Neutral:</span> <span>{neutral}</span>
+      </p>
+      <p>
+        <span>Bad:</span> <span>{bad}</span>
+      </p>
+      <Line />
+      <p>
+        <span>Total:</span> <span>{total}</span>
+      </p>
+      <PositivePercentage>
+        <span>Positive feedback:</span>
+        <Progress
+          type="circle"
+          strokeColor={{
+            '0%': '#108ee9',
+            '100%': '#87d068',
+          }}
+          percent={positivePercentage}
+        />
+        {/* <ShowPercentage>{positivePercentage} %</ShowPercentage> */}
+      </PositivePercentage>
     </Wrap>
   );
 }
