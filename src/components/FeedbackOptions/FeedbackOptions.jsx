@@ -81,14 +81,3 @@ FeedbackOptions.propTypes = {
   options: PropTypes.array.isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
-
-// (
-//         <Button
-//           key={option}
-//           type="button"
-//           name={option}
-//           onClick={onLeaveFeedback}
-//         >
-//           {option[0].toUpperCase() + option.slice(1)}
-//         </Button>
-//       )

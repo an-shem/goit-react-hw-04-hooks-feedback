@@ -30,6 +30,7 @@ export default function Statistics({
         <span>Positive feedback:</span>
         <Progress
           type="circle"
+          status="normal"
           strokeColor={{
             '0%': '#108ee9',
             '100%': '#87d068',
